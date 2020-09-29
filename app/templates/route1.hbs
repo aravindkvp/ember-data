@@ -1,0 +1,53 @@
+{{#each this.model as |person|}}
+    <div>FirstName: {{person.firstname}}</div>
+    <div>LastName: {{person.lastname}}</div>
+    <div>FullName: {{person.fullname}}</div>
+    <div>Age: {{person.age}}</div>
+    <div>Balance: {{person.balance}}</div>
+    <div>. .</div>
+{{/each}}
+<div>Find Record</div>
+<Input @value={{this.record1.personid}} ></Input>
+<button {{action "getRecord" this.record1.personid }}>Get Record</button>
+<div>
+    <div>FirstName: {{this.record1.firstname}}</div>
+    <div>LastName: {{this.record1.lastname}}</div>
+    <div>FullName: {{this.record1.fullname}}</div>
+    <div>Age: {{this.record1.age}}</div>
+    <div>Balance: {{this.record1.balance}}</div>
+</div>
+<div>. .</div>
+<div>Peek Record</div>
+<Input @value={{this.record2.personid}} ></Input>
+<button {{action "peekRecord" this.record2.personid }}>Peek Record</button>
+<div>
+    <div>FirstName: {{this.record2.firstname}}</div>
+    <div>LastName: {{this.record2.lastname}}</div>
+    <div>FullName: {{this.record2.fullname}}</div>
+    <div>Age: {{this.record2.age}}</div>
+    <div>Balance: {{this.record2.balance}}</div>
+</div>
+<div>. .</div>
+
+<div>Query Records(age=45)</div>
+{{#each this.queryrecords as |person|}}
+    <div>FirstName: {{person.firstname}}</div>
+    <div>LastName: {{person.lastname}}</div>
+    <div>FullName: {{person.fullname}}</div>
+    <div>Age: {{person.age}}</div>
+    <div>Balance: {{person.balance}}</div>
+    <div>. .</div>
+{{/each}}
+
+<div>. .</div>
+<div>Query Single Record(age=45)</div>
+{{#let this.singlerecord as |person|}}
+<div>FirstName: {{person.firstname}}</div>
+<div>LastName: {{person.lastname}}</div>
+<div>FullName: {{person.fullname}}</div>
+<div>Age: {{person.age}}</div>
+<div>Balance: {{person.balance}}</div>
+{{/let}}
+<div>. .</div>
+
+{{outlet}}

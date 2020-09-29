@@ -1,0 +1,20 @@
+<div>Reflexive Relationships</div>
+<img src="https://www.gatevidyalay.com/wp-content/uploads/2018/07/Child-Tree-Terminology-1.png" alt="">
+<div>Current Node: <Input @value={{this.currentnode}}></Input><button {{action "update"}}>Get Data</button></div>
+<div>Name: "{{this.node.name}}"</div>
+<div>Parent: "{{this.node.parent.name}}"</div>
+<div>Child Nodes:</div>
+{{#each this.node.children as |child|}}
+<div>"{{child.name}}"</div>
+{{/each}}
+<div>..</div>
+<div>Polymorphism</div>
+<div>Name: {{this.model.name}}</div>
+{{#each this.model.paymentMethods as |payment|}}
+<div>Type: {{payment.type}}</div>
+{{/each}}
+<div>. .</div>
+<div>Query</div>
+<div></div>
+
+{{outlet}}

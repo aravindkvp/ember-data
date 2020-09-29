@@ -1,5 +1,18 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="nav" >
+  <div class="links">
+    {{#link-to "route1"}}Finding Records{{/link-to}}
+  </div>
+  <div class="links">
+    {{#link-to "route2"}} Updating Records{{/link-to}}
+  </div>
+  <div class="links">
+    {{#link-to "route3"}} Relationships{{/link-to}}
+  </div>
+  <div class="links">
+    {{#link-to "route4"}} Services{{/link-to}}
+  </div>
+  
+</div>
+<div class="m-30">
+  {{outlet}}
+</div>

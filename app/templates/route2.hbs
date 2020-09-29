@@ -1,0 +1,39 @@
+<div>
+    <div class="list inline border">
+        {{#each this.model as |hero|}}
+            
+            <div>FirstName: {{hero.firstname}}</div>
+            <div>LastName: {{hero.lastname}}</div>
+            <div>HeroName: {{hero.heroname}}</div>
+            <div>Comments:</div>
+            {{#each hero.comments as |comment|}}
+                <div>"{{comment.message}}"</div>
+            {{/each}}
+            <div>. .</div>
+        {{/each}}
+    </div>
+    <div class="operations inline border">
+        <div>Add Record</div>
+        <div>ID<Input @value={{this.addid}}></Input></div>
+        <div>FirstName<Input @value={{this.addfirstname}}></Input></div>
+        <div>LastName<Input @value={{this.addlastname}}></Input></div>
+        <div>HeroName<Input @value={{this.addheroname}}></Input></div>
+        <div><button {{action "addRecord"}}>Add Record</button></div>
+        <div><button {{action "updateRecord"}}>Update Record</button></div>
+        <div><button {{action "deleteRecord"}}>Delete Record</button></div>
+        <div> Comment<Input @value={{this.addcomment}}></Input></div>
+        <div><button {{action "addComment"}}>Add Comment</button></div>
+        <div>. .</div>
+    </div>
+</div>
+
+
+{{#each this.post.errors.title as |error|}}
+  <div class="error">{{error.message}}</div>
+{{/each}}
+{{#each this.post.errors.body as |error|}}
+  <div class="error">{{error.message}}</div>
+{{/each}}
+
+
+{{outlet}}

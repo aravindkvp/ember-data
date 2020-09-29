@@ -1,0 +1,35 @@
+.nav{
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+}
+.links{
+    display: inline-block;
+    margin-left: 15px;
+}
+.m-30{
+    margin: 30px;
+}
+.m-t-15{
+    margin-top: 15px;
+}
+.border{
+    border-style: solid;
+    border-width: 1px;
+}
+.border-radius{
+    border-radius: 5px;
+}
+.inline{
+   display: inline-block !important; 
+   float: left;
+}
+.list{
+    width: 60%;
+    height: 600px;
+    padding: 10px;
+}
+.operations{
+    width: 30%;
+    padding: 10px;
+}

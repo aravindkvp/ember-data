@@ -1,0 +1,11 @@
+<Input @value={{this.id}} ></Input>
+<button {{action "getRecord" this.record1.id }}>Get Record</button>
+<div>
+    <div>ID: {{this.id}}</div>
+    <div>FirstName: {{this.firstname}}</div>
+    <div>LastName: {{this.lastname}}</div>
+    <div>FullName: {{this.fullname}}</div>
+    <div>Age: {{this.age}}</div>
+    <div>Balance: {{this.balance}}</div>
+</div>
+{{yield}}
